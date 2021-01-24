@@ -92,9 +92,66 @@ function getAllUsers(req, res) {
         }
     })
 }
+
+function getbyname(req, res) {
+    var name = req.params.name;
+    User.find({ firstname: { $regex: name } }, (error, allUsers) => {
+        if (error) {
+            res.status(500).send({
+                statusCode: 500,
+                message: "Error en el Servidor"
+            })
+        } else {
+            res.status(200).send({
+                statusCode: 200,
+                message: "Todos los usuarios",
+                allUsers: allUsers
+            })
+        }
+    })
+}
+
+function getbyemail(req, res) {
+    var email = req.params.email;
+    User.find({ email: email }, (error, allUsers) => {
+        if (error) {
+            res.status(500).send({
+                statusCode: 500,
+                message: "Error en el Servidor"
+            })
+        } else {
+            res.status(200).send({
+                statusCode: 200,
+                message: "Todos los usuarios",
+                allUsers: allUsers
+            })
+        }
+    })
+}
+
+function getbyage(req, res) {
+    var age = req.params.age;
+    User.find({ age: age }, (error, allUsers) => {
+        if (error) {
+            res.status(500).send({
+                statusCode: 500,
+                message: "Error en el Servidor"
+            })
+        } else {
+            res.status(200).send({
+                statusCode: 200,
+                message: "Todos los usuarios",
+                allUsers: allUsers
+            })
+        }
+    })
+}
 module.exports = {
     create,
     update,
     remove,
-    getAllUsers
+    getAllUsers,
+    getbyname,
+    getbyemail,
+    getbyage
 }

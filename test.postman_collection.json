@@ -1,0 +1,170 @@
+{
+    "info": {
+        "_postman_id": "8c44918b-e1df-42d7-974b-e790a394e3e4",
+        "name": "test",
+        "description": "test",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [{
+            "name": "createUser",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"firstname\": \"Berta\",\r\n    \"lastname\": \"Fernandez\",\r\n    \"email\": \"bertaf@gmail.com\",\r\n    \"age\": 45\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:3000/api/",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        ""
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "UpdateUser",
+            "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"firstname\": \"Mariana\",\r\n    \"lastname\": \"Rivera\",\r\n    \"email\": \"mrivera@gmail.com\",\r\n    \"age\": 25\r\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:3000/api/600cf64131378c09d477df3e",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "600cf64131378c09d477df3e"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "allUsers",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/allUsers",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "allUsers"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "deleteUser",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/600d9e40e07c73392c6412d7",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "600d9e40e07c73392c6412d7"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Findbyname",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/UsersbyName/M",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "UsersbyName",
+                        "M"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Findbyemail",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/UsersbyEmail/michael.rivera@correounivalle.edu.co",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "UsersbyEmail",
+                        "michael.rivera@correounivalle.edu.co"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Findbyage",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/Usersbyage/15",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "Usersbyage",
+                        "15"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
